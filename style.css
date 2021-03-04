@@ -6,6 +6,13 @@ ul {
   padding: 0;
 }
 
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 body {
   background-color: #b5e0d2;
   text-align: center;
@@ -16,6 +23,9 @@ body {
   margin: auto;
   background-color: #f1f0f7;
   border-radius: 20px;
+  -webkit-box-shadow: 9px 11px 5px 0px rgba(125, 124, 125, 1);
+  -moz-bow-shadow: 9px 11px 5px 0px rgba(125, 124, 125, 1);
+  box-shadow: 9px 11px 5px 0px rgba(125, 124, 125, 1);
 }
 
 .header {
@@ -38,10 +48,30 @@ body {
   overflow-y: auto; /* 아이템이 점점 많아지면 자동으로 스크롤바가 생긴다  */
 }
 
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+}
+
+.item__divider {
+  width: 90%;
+  height: 1px;
+  background-color: lightgray;
+  margin: auto;
+}
+
+.item__delete {
+  font-size: 16px;
+  transition: all 300ms ease-in;
+}
+
+.item__delete:hover {
+  color: red;
+  transform: scale(1.5); /* 마우스 올렸을 때 쓰레기통 1.5배로 커짐 */
+}
+
 .footer {
-  height: 48px;
-  padding: 8px;
-  font-size: 24px;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -50,5 +80,26 @@ body {
     rgba(137, 216, 232, 1) 84%
   );
   border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
+  width: 100%;
+  height: 32px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.footer__button {
+  width: 48px;
+  height: 48px;
+  font-size: 32px;
+  border-radius: 50%;
   color: white;
+  transition: transform 300ms ease-in;
+}
+
+.footer__button:hover {
+  transform: scale(1.2);
 }
