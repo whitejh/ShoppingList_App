@@ -52,5 +52,6 @@ function createItem() {
 addBtn.addEventListener('click', () => {
   onAdd();
 });
+
 // 클릭이 되면 우리가 등록한 콜백함수(onAdd()) 호출
 //
